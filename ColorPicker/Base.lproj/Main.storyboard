@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="Loup" id="7RB-2H-hPc">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Loup" id="Qlt-Bi-oCZ">
+                                    <items>
+                                        <menuItem title="Quit" keyEquivalent="q" id="v7z-WU-ePb">
+                                            <connections>
+                                                <action selector="terminate:" target="hnw-xV-0zn" id="jbm-fH-5mZ"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ColorPicker" customModuleProvider="target"/>
+                <menu id="mg9-uZ-zR9">
+                    <items>
+                        <menuItem title="Start" keyEquivalent="4" id="c9S-40-MGU">
+                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                            <connections>
+                                <action selector="startButtonClicked:" target="pnK-TO-gfJ" id="1OT-1K-KMi"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="jsw-n3-Lo7"/>
+                        <menuItem title="Preferences" keyEquivalent="," id="Nur-uD-oFc"/>
+                        <menuItem isSeparatorItem="YES" id="h7i-bD-NAK"/>
+                        <menuItem title="Quit" keyEquivalent="q" id="Wis-Uf-8NV">
+                            <connections>
+                                <action selector="terminate:" target="Ady-hI-5gd" id="10V-fR-o1X"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+                <customObject id="pnK-TO-gfJ" customClass="StatusMenuController" customModule="ColorPicker" customModuleProvider="target">
+                    <connections>
+                        <outlet property="statusMenu" destination="mg9-uZ-zR9" id="2Pe-wt-gdb"/>
+                    </connections>
+                </customObject>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="-18"/>
+        </scene>
+    </scenes>
+</document>
