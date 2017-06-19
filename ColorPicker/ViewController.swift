@@ -17,6 +17,10 @@ class ViewController: NSViewController {
     }
     
     override func loadView() {
-        self.view = NSView()
+        if(test) {
+            self.view = NSView(frame: NSRect(x: 0, y: 0, width: 300, height: 300))
+        } else {
+            self.view = NSView()
+        }
     }
 }

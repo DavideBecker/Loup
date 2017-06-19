@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B2E59911EDC1C0B000A82C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2E59901EDC1C0B000A82C9 /* ViewController.swift */; };
+		6B84BAE81EF3E100009E5D0B /* MouseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B84BAE71EF3E100009E5D0B /* MouseManager.swift */; };
 		6B9A995A1EF2E1C500B1D06A /* KeystrokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A99591EF2E1C500B1D06A /* KeystrokeManager.swift */; };
 		6BEA20791EC8997100072B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA20781EC8997100072B8A /* AppDelegate.swift */; };
 		6BEA20801EC8997100072B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEA207E1EC8997100072B8A /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		6B2E59901EDC1C0B000A82C9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B84BAE71EF3E100009E5D0B /* MouseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseManager.swift; sourceTree = "<group>"; };
 		6B9A99591EF2E1C500B1D06A /* KeystrokeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystrokeManager.swift; sourceTree = "<group>"; };
 		6BEA20751EC8997100072B8A /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEA20781EC8997100072B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6B9A99591EF2E1C500B1D06A /* KeystrokeManager.swift */,
+				6B84BAE71EF3E100009E5D0B /* MouseManager.swift */,
 				6BEA20931EC8BBF300072B8A /* ScreenshotManager.swift */,
 				6BEA20911EC8BBD900072B8A /* DisplayManager.swift */,
 				6BEA20971EC8CE0600072B8A /* WindowManager.swift */,
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B84BAE81EF3E100009E5D0B /* MouseManager.swift in Sources */,
 				6B2E59911EDC1C0B000A82C9 /* ViewController.swift in Sources */,
 				6B9A995A1EF2E1C500B1D06A /* KeystrokeManager.swift in Sources */,
 				6BEA20901EC8BB6F00072B8A /* Initializer.swift in Sources */,

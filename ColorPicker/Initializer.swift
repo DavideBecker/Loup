@@ -10,16 +10,31 @@ import Cocoa
 
 class Initializer {
     static func prepareWindows() {
+        // Get info about all displays
         let displayCount = DisplayManager.getAmountOfDisplays()
         let activeDisplays = DisplayManager.getActiveDisplays(amountOfDisplays: displayCount)
         
+        // Take a screenshot for every display
         let screenshots = ScreenshotManager.takeScreenshots(amount: displayCount, displays: activeDisplays)
         
-        let ref = WindowManager.newWindow(display: screenshots[0])
+        // For every display
+        for screenshot in screenshots {
+            // Create a new window
+            let ref = WindowManager.newWindow(display: screenshot)
+            
+            // Store the reference somewhere persistent
+            instances.append(ref)
+            
+            // Initialize the magnifying glass
+            ref.window.controller.initMagnifier()
+            ref.window.controller.magnifier.zoomedImage.image = ref.window.controller.magnifier.redrawImage()
+            ref.window.controller.magnifier.zoomedImage.frame.size = (ref.window.controller.magnifier.zoomedImage.image?.size)!
+        }
         
-        instances.append(ref)
-//        references.append(ref)
+        MouseManager.track()
         
+        colorPickerWindowIsOpen = true
         NSApp.activate(ignoringOtherApps: true)
+        
     }
 }

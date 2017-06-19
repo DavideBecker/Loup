@@ -29,10 +29,9 @@ class WindowManager {
         // Create an image view for the screenshot
         let imgView = NSImageView(image: NSImage(cgImage: display.screenshot.image, size: displaySize.size))
         imgView.frame = displaySize
-        controller.contentViewController?.view.addSubview(imgView)
-        
-        // Initialize the magnifying glass
-        controller.initMagnifier()
+        if(!test) {
+            controller.contentViewController?.view.addSubview(imgView)
+        }
         
         // Set some styles for the window
         controller.window?.backgroundColor = NSColor(calibratedHue: 0, saturation: 1.0, brightness: 0, alpha: 0.7)
@@ -53,10 +52,26 @@ class WindowManager {
         
         // Set the window to fullscreen
         let optionsDictionary = [NSFullScreenModeApplicationPresentationOptions : NSNumber(value: presOptions.rawValue)]
-        controller.contentViewController?.view.enterFullScreenMode(NSScreen.main()!, withOptions: optionsDictionary)
+        if(!test) {
+            controller.contentViewController?.view.enterFullScreenMode(NSScreen.main()!, withOptions: optionsDictionary)
+        }
         controller.contentViewController?.view.wantsLayer = true
         
         // Return a struct that contains references to all relevant data
         return Instance(window: Window(controller: controller), display: display)
+    }
+    
+    
+    static func closeWindows() {
+        for instance in instances {
+            instance.window.controller.contentViewController?.view.exitFullScreenMode(options: [:])
+            instance.window.controller.close()
+        }
+        
+        instances = []
+        
+        MouseManager.stopTracking()
+        
+        colorPickerWindowIsOpen = false
     }
 }

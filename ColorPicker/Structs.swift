@@ -13,6 +13,7 @@ struct Screenshot {
     var displayID: CGDirectDisplayID
     var image: CGImage
     var rep: NSBitmapImageRep
+    var zoomLevel: Int
 }
 
 // Wrapper for the window

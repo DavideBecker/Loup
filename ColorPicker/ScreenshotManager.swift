@@ -22,7 +22,8 @@ class ScreenshotManager {
             let screenshot = Screenshot(
                 displayID: i,
                 image: image,
-                rep: NSBitmapImageRep(cgImage: image)
+                rep: NSBitmapImageRep(cgImage: image),
+                zoomLevel: 8
             )
             screenshots.append(Display(screen: NSScreen.main()!, screenshot: screenshot))
         }

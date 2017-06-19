@@ -16,7 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Check if we have accessibility access, if not ask for permission.
         // Global shortcuts are using accessibility
         accessibilityEnabled = checkForAccessibilityPermissions()
-        
+        KeystrokeManager.registerGlobalHandler()
+        KeystrokeManager.registerLocalHandler()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

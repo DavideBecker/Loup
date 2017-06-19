@@ -33,7 +33,7 @@
                 <menu id="mg9-uZ-zR9">
                     <items>
                         <menuItem title="Start" keyEquivalent="4" id="c9S-40-MGU">
-                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                            <modifierMask key="keyEquivalentModifierMask" shift="YES" option="YES"/>
                             <connections>
                                 <action selector="startButtonClicked:" target="pnK-TO-gfJ" id="1OT-1K-KMi"/>
                             </connections>
